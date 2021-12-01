@@ -1,0 +1,17 @@
+<app-header class="header"></app-header>
+<app-input placeholder="Pesquise por um Pokemon" (OnChange)="search($event)"></app-input>
+<main *ngIf="pokemons$ | async as pokemons">
+    <app-card 
+        *ngFor="let pokemon of pokemons"
+        [pokemonDetail]="pokemon"
+        [routerLink]="['/pokemon/detail', pokemon.id]"
+    ></app-card>
+</main>
+
+<footer class="footer">
+    <app-paginator
+        [perPage]="limit"
+        [count]="count"
+        (OnPagination)="onPageChange($event)"
+    ></app-paginator>
+</footer>

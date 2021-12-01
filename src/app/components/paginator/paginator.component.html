@@ -1,0 +1,8 @@
+<div class="paginator-container" *ngIf="show">
+    <span class="paginator-item" (click)="previous()"><<</span>
+
+    <span class="paginator-item" *ngFor="let p of pagesToShow" [class.selected]="isSelected(p)"
+        [class.noEvents]="p === -1" (click)="changePage(p)">{{ p > 0 ? p : '...' }}</span>
+
+    <span class="paginator-item" (click)="next()">>></span>
+</div>

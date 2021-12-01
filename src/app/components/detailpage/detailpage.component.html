@@ -1,0 +1,84 @@
+<app-header></app-header>
+<button [routerLink]="['']">Voltar</button>
+<main>
+    <div class="card" *ngIf="pokemon">
+        <img [src]="pokemonImage" alt="">
+        <h1>
+            {{ name }}
+        </h1>
+
+        <div class="stats">
+            <span style="font-size: 24px; font-weight: bold; text-align: center;">Estatísticas</span>
+
+            <div>
+                <span>HP</span>
+                <div class="skillbar">
+                    <div class="skillbar_force"
+                        style="background-color: rgb(31, 33, 167);" 
+                        [ngStyle]="{ width: hp + '%' }"
+                    >
+                        {{ hp }}
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <span>Ataque</span>
+                <div class="skillbar">
+                    <div class="skillbar_force"
+                        style="background-color: rgb(219, 13, 13);" 
+                        [ngStyle]="{ width: attack + '%' }"
+                    >
+                        {{ attack }}
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <span>Defesa</span>
+                <div class="skillbar">
+                    <div class="skillbar_force"
+                        style="background-color: rgb(20, 220, 220);" 
+                        [ngStyle]="{ width: defense + '%' }"
+                    >
+                        {{ defense }}
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <span>Ataque Especial</span>
+                <div class="skillbar">
+                    <div class="skillbar_force"
+                        style="background-color: rgb(231, 180, 10);" 
+                        [ngStyle]="{ width: special_attack + '%' }"
+                    >
+                        {{ special_attack }}
+                    </div>
+                </div>
+            </div>
+            <div>
+                <span>Defesa Especial</span>
+                <div class="skillbar">
+                    <div class="skillbar_force"
+                        style="background-color: rgb(50, 220, 20);" 
+                        [ngStyle]="{ width: special_defense + '%' }"
+                    >
+                        {{ special_defense }}
+                    </div>
+                </div>
+            </div>
+            <div>
+                <span>Velocidade</span>
+                <div class="skillbar">
+                    <div class="skillbar_force"
+                        style="background-color: rgb(0, 0, 0);" 
+                        [ngStyle]="{ width: velocity + '%' }"
+                    >
+                        {{ velocity }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

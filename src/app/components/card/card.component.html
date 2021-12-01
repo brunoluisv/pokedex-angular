@@ -1,0 +1,10 @@
+<div class="card" [class]="type">
+    <span class="name">{{ capitalizeFirstLetter(name) }}</span>
+    <div>
+        <span class="type" *ngFor="let typePokemon of pokemonDetail?.types">
+            {{ typePokemon.type.name }}
+        </span>
+    </div>
+
+    <img [src]="thumbnail" alt="">
+</div>

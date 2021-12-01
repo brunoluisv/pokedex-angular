@@ -1,0 +1,106 @@
+button {
+    width: 200px;
+    margin: 20px 0px 0px 20px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid #cbcbcb;
+    font: 16px 'Recursive';
+    transition: all 1s;
+}
+
+button:hover {
+    background: #ccc;
+    border-color: #fff;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(90vh - 60px);
+
+    .card {
+        height: 70vh;
+        width: 550px;
+        background-color: #FFF;
+        border-radius: 8px;
+        box-shadow: 10px 10px 63px 0px rgba(0,0,0,0.29);
+        -webkit-box-shadow: 10px 10px 63px 0px rgba(0,0,0,0.29);
+        -moz-box-shadow: 10px 10px 63px 0px rgba(0,0,0,0.29);
+        position: relative;
+
+        img {
+            position: absolute;
+            top: -60px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+            height: 200px;
+        }
+
+        h1 {
+            font-family: 'Recursive';
+            font-size: 70px;
+            font-weight: bold;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+            top: 200px;
+        }
+
+        .stats {
+            display: flex;
+            flex-direction: column;
+            margin-top: 300px;
+            padding: 40px;
+            font-family: 'Recursive';
+            font-weight: 600;
+
+            div {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-top: 10px;
+
+                span {
+                    width: 35%;
+                }
+
+                .skillbar {
+                    width: 100%;
+                    background-color: #ddd;
+                    height: 18px;
+                    border-radius: 10px;
+
+                    .skillbar_force {
+                        border-radius: 10px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        color: white;
+                        height: 18px;
+                        margin: 0px;
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    main {
+        .card {
+            width: 380px;
+            img {
+                height: 170px;
+            }
+        }
+    }
+}
